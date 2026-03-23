@@ -33,9 +33,9 @@ resource "aws_security_group" "private_sg" {
 # Launch Template for Auto Scaling Group
 resource "aws_launch_template" "web_lt" {
   name_prefix   = "web-template-"
-  image_id      = "ami-05ffe3c48a9991133" # Replace with a valid AMI ID in your region
-  instance_type = "t3.micro"
-  key_name = "AKtest"
+  image_id      = "ami-02dfbd4ff395f2a1b" # Replace with a valid AMI ID in your region
+  instance_type = "t2.medium"
+  key_name = "demoKey"
 
   user_data = base64encode(<<-EOF
               #!/bin/bash
